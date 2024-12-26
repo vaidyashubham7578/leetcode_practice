@@ -1,6 +1,7 @@
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
+        //  find pivot
         int pivot=-1;
         int n=nums.size();
         for(int i=n-2; i>=0; i--){
@@ -14,6 +15,7 @@ public:
             return ;
         }
 
+        // find rightmost elment > pivot
         for(int i=n-1; i>pivot; i--){
             if(nums[i]>nums[pivot]){
                 swap(nums[i], nums[pivot]);
@@ -21,6 +23,7 @@ public:
             }
         }
 
+        // reverse ( pivot+1 to n-1)
         int st=pivot+1;
         int end=n-1;
         while(st<end){
