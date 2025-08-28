@@ -16,7 +16,7 @@ public:
         int slow=nums[0], fast=nums[0];
         do{
             slow=nums[slow]; //+1
-            fast=nums[nums[fast]]; //=2
+            fast=nums[nums[fast]]; //+2
         }while(slow!=fast);
 
         slow=nums[0];
